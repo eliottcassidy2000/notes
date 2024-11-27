@@ -21,6 +21,7 @@ sudo apt-get autoclean
 # Clean up Kubernetes configuration and data files
 echo "Removing Kubernetes configuration and data..."
 sudo rm -rf /etc/kubernetes
+sudo rm -rf /etc/default/kubelet
 sudo rm -rf /etc/systemd/system/kubelet.service.d
 sudo rm -rf /etc/systemd/system/kubelet.service
 sudo rm -rf /var/lib/kubelet
