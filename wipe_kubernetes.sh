@@ -5,7 +5,7 @@ echo "Stopping Kubernetes services..."
 sudo systemctl stop kubelet
 sudo systemctl stop docker
 sudo systemctl stop containerd
-sudo kubeadm reeset --force
+sudo kubeadm reset --force
 
 # Remove Kubernetes packages
 echo "Removing Kubernetes packages..."
