@@ -31,6 +31,7 @@ sudo rm -rf /var/lib/etcd
 echo "Removing CNI configurations..."
 sudo rm -rf /etc/cni
 sudo rm -rf /opt/cni
+sudo rm -rf /etc/cni/net.d  # Additional CNI directory to ensure cleanup
 
 # Remove logs and container data
 echo "Removing logs and container data..."
