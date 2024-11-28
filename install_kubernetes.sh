@@ -73,8 +73,7 @@ kubeadm version
 kubelet version
 kubectl version --client
 
-# Initialize Kubernetes master node (Optional)
-# If you're setting up a Kubernetes master node, uncomment and configure the following line:
-# sudo kubeadm init --kubernetes-version v1.30.7 --pod-network-cidr=10.244.0.0/16 --service-cidr=10.97.0.0/16
+mkdir /var/lib/kubelet && sudo kubeadm config print init-defaults > /var/lib/kubelet/config.yaml && \
+sudo sed -i 's/cgroupDriver: .*/cgroupDriver: systemd/' /var/lib/kubelet/config.yaml
 
 echo "Kubernetes installation complete! You can now initialize the cluster (if applicable)."
